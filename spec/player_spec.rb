@@ -8,6 +8,7 @@
 
 require './player.rb'
 require './dice.rb'
+require './hand.rb'
 
 describe PokerDice::Player do
   # has an attribute hand
