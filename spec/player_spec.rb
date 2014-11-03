@@ -2,7 +2,7 @@
 # first lets test so that all of the values in a hand add to 5
   # hand is class that returns a hash
 
-require './dice.rb'
+require './player.rb'
 
 describe PokerDice::Player do
   # has an attribute hand
@@ -13,4 +13,6 @@ describe PokerDice::Player do
       expect(player.hand).to be_instance_of(Hash)
     end
   end
+
+
 end
