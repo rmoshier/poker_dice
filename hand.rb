@@ -3,7 +3,7 @@ module PokerDice
   class Hand
     attr_reader :face_values
 
-    def initialize
+    def initialize(thing)
       @face_values = ['Q', 'K', 'T', '9', 'Q']
     end
 
@@ -13,6 +13,6 @@ module PokerDice
         counts[face] += 1
       end
     end
-    
+
   end
 end

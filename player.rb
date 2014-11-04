@@ -4,7 +4,7 @@ module PokerDice
     attr_reader :hand, :dice
 
     def initialize
-      @hand = PokerDice::Hand.new
+      @hand = PokerDice::Hand.new('thing')
       @dice = 5.times.map { PokerDice::Die.new }
     end
 

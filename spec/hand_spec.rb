@@ -4,7 +4,7 @@ require './hand.rb'
 
 
 describe PokerDice::Hand do
-  let(:hand) {PokerDice::Hand.new}
+  let(:hand) {PokerDice::Hand.new('thing')}
   it "returns an array" do
     expect(hand.face_values).to be_instance_of(Array)
   end
@@ -17,6 +17,13 @@ describe PokerDice::Hand do
     expect(hand.face_values.sample).to be_instance_of(String)
   end
 
+  describe '#initialize' do
+    it "accepts an argument" do
+      expect{PokerDice::Hand.new}.to raise_error(ArgumentError)
+    end
+  end
+end
+
   # describe "#rank" do
   #   context "when hand has 5 Queens" do
   #     #he writes it so a new hand is given an array of dice
@@ -24,4 +31,3 @@ describe PokerDice::Hand do
   #     # return the face_value it's initialized with
   #     expect(hand.rank).to eq
   #   end
-end
