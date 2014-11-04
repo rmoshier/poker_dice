@@ -1,5 +1,5 @@
 module PokerDice
-  
+
  class Die
     FACES = %w[ 9 T J Q K A ]
     # same as typing ['9', 'T', 'J', 'Q', 'K', 'A']
@@ -13,6 +13,21 @@ module PokerDice
     def roll
       @top_face = FACES[ rand(0..5) ]
     end
+  end
+
+  class LoadedDie
+    attr_reader :top_face
+
+    def initialize(die_value)
+      @top_face = die_value
+      roll
+    end
+
+    def roll
+      @top_face
+    end
+
+
   end
 
 end

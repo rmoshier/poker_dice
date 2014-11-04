@@ -3,8 +3,8 @@ module PokerDice
   class Hand
     attr_reader :face_values
 
-    def initialize(thing)
-      @face_values = ['Q', 'K', 'T', '9', 'Q']
+    def initialize(dice_array)
+      @face_values = dice_array.map { |die| die.top_face }
     end
 
     def rank
