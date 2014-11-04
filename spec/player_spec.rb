@@ -15,19 +15,6 @@ describe PokerDice::Player do
   # player instance responds to hand attribute
   let(:player) {PokerDice::Player.new}
 
-  describe "#hand" do
-    it "returns an array" do
-      expect(player.hand).to be_instance_of(Array)
-    end
-
-    it "contains 5 things" do
-      expect(player.hand.length).to eq 5
-    end
-
-    it "contains strings" do
-      expect(player.hand.sample).to be_instance_of(String)
-    end
-  end
 
   describe "#dice" do
     it "returns an array" do
